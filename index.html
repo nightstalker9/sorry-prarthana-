@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,6 +57,28 @@
       font-size: 1.8em;
       margin-top: 20px;
     }
+    .hug-message {
+      display: none;
+      font-size: 1.4em;
+      color: #fff;
+      margin-top: 20px;
+      animation: fadeIn 1s ease forwards;
+    }
+    .hug-button {
+      margin-top: 30px;
+      padding: 12px 24px;
+      font-size: 1.1em;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      background-color: #ffffffaa;
+      color: #e34d8d;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .hug-button:hover {
+      background-color: #ffffff;
+    }
     @keyframes pulse {
       0%, 100% { transform: scale(1); }
       50% { transform: scale(1.25); }
@@ -63,6 +86,10 @@
     @keyframes appear {
       0% { opacity: 0; transform: translateY(40px); }
       100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
     }
   </style>
 </head>
@@ -81,7 +108,9 @@
     </p>
     <p class="closing">With all my love and regret, always. 💖</p>
     <div class="heart">❤️</div>
+    <button class="hug-button" onclick="document.getElementById('hugMsg').style.display='block';">Tap to Forgive Me 💌</button><br><br><button class="hug-button" onclick="document.getElementById('hugMsg2').style.display='block';">Click to Send a Hug 🤗</button>
+    <div id="hugMsg2" class="hug-message">*sending you the warmest, tightest hug ever...* 💞🤗💗</div><div id="hugMsg" class="hug-message">*Your forgiveness means the world to me... thank you for being my everything.* 💖🙏🌸</div>
     <div class="emoji">✨💖🤍🌹</div>
   </div>
 </body>
-  </html>
+</html>
